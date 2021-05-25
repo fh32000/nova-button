@@ -33,7 +33,7 @@
                                       </textarea>
                                     <br>
                                     <br>
-                                    <select v-if="field.chooseOption != null"
+                                    <select v-if="field.chooseOption != null && field.reason == null"
                                             id="paymentType"
                                             dusk="paymentType"
                                             required
