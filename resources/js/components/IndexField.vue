@@ -35,7 +35,7 @@
                                         required
                                         placeholder="Payment Type"
                                         class="w-full form-control form-input form-input-bordered py-3 h-auto des"
-                                        v-model="field.chooseOption"
+                                        v-model="field.selected"
                                 >
                                     <option v-for="option in field.chooseOption[0]" v-bind:value="option">
                                       {{ option }}

@@ -78,6 +78,7 @@ export default {
         {
           event: this.field.event,
           chooseOption: this.field.chooseOption,
+          selected: this.field.selected,
           note:  this.field.reason,
         }
       );
