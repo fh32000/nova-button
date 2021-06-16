@@ -1,7 +1,7 @@
 ## Nova Button
 
 [![Latest Version on Github](https://img.shields.io/github/release/dillingham/nova-button.svg?style=flat-square)](https://packagist.org/packages/dillingham/nova-button)
-[![Total Downloads](https://img.shields.io/packagist/dt/dillingham/nova-button.svg?style=flat-square)](https://packagist.org/packages/dillingham/nova-button) [![Twitter Follow](https://img.shields.io/twitter/follow/dillinghammm?color=%231da1f1&label=Twitter&logo=%231da1f1&logoColor=%231da1f1&style=flat-square)](https://twitter.com/dillinghammm)
+[![Total Downloads](https://img.shields.io/packagist/dt/dillingham/nova-button.svg?style=flat-square)](https://packagist.org/packages/dillingham/nova-button) [![Twitter Follow](https://img.shields.io/twitter/follow/im_brian_d?color=%231da1f1&label=Twitter&logo=%231da1f1&logoColor=%231da1f1&style=flat-square)](https://twitter.com/im_brian_d)
 
 Nova package for rendering buttons on index, detail and lens views.
 
@@ -112,18 +112,33 @@ Button::make('Cancel Account')->confirm('Are you sure?'),
 Button::make('Cancel Account')->confirm('title', 'content'),
 ```
 ### Reason
-You can require a Reason or note for descructive actions 
+You can require a Reason or note for descructive actions
 
 first add confirm then add reason
 
 ```php
 Button::make('Cancel Account')->confirm('Are you sure?')->reason('put your reason'),
 ```
-then you can get data for reason from even or anywhere using : 
+then you can get data for reason from even or anywhere using :
 
 ```php
    $note =request()->input('note');
 ```
+
+### Choose Option
+You can require an chooseOption for multiple actions
+
+first add confirm then add chooseOption
+
+```php
+Button::make('Cancel Account')->confirm('Are you sure?')->chooseOption(['options']),
+```
+then you can get data for reason from even or anywhere using :
+
+```php
+   $potion =request()->input('option');
+```
+
 ### Button state
 When using events, you want visual feedback for the end user.
 
@@ -245,3 +260,13 @@ Button::make('Confirm')->event('App\Events\ConfirmClick')
 # Telescope inspection
 
 ![event-triggered](https://user-images.githubusercontent.com/29180903/50742633-1a1b8800-11dc-11e9-8a2d-5ec70d3fcae4.png)
+
+---
+
+# Author
+
+Hi 👋, Im Brian Dillingham, creator of this Nova package [and others](https://novapackages.com/collaborators/dillingham)
+
+Hope you find it useful. Feel free to reach out with feedback.
+
+Follow me on twitter: [@im_brian_d](https://twitter.com/im_brian_d) 
