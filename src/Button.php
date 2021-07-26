@@ -43,7 +43,7 @@ class Button extends Field
 
     public $confirm = null;
 
-    public $chooseOption= [];
+    public $chooseOption= null;
 
     public $reason = null;
 
