@@ -25,8 +25,22 @@
                                           placeholder="Description"
                                           class="w-full form-control form-input form-input-bordered py-3 h-auto des"
                                           v-model="field.reason">
-                                    >
-                                     </textarea>
+                                        >
+                                        </textarea>
+                                <br>
+                                <br>
+                                <select v-if="field.chooseOption != null && field.reason == null"
+                                        id="paymentType"
+                                        dusk="paymentType"
+                                        required
+                                        placeholder="Payment Type"
+                                        class="w-full form-control form-input form-input-bordered py-3 h-auto des"
+                                        v-model="field.selected"
+                                >
+                                    <option v-for="option in field.chooseOption[0]" v-bind:value="option">
+                                      {{ option }}
+                                    </option>
+                                </select>
                             </div>
                             <div
                                 class="border-t border-50 px-6 py-3 ml-auto flex items-center"

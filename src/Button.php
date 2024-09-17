@@ -39,7 +39,11 @@ class Button extends Field
 
     public $link = null;
 
+    public $selected= null;
+
     public $confirm = null;
+
+    public $chooseOption= null;
 
     public $reason = null;
 
@@ -90,7 +94,9 @@ class Button extends Field
             'reason'         => $this->reason,
             'visible'        => $this->visible,
             'classes'        => $this->classes,
+            'selected'       => $this->selected,
             'indexName'      => $this->indexName,
+            'chooseOption'   => $this->chooseOption,
             'title'          => $this->title,
             'indexAlign'     => $this->indexAlign,
             'errorText'      => $this->errorText,
@@ -133,6 +139,15 @@ class Button extends Field
     public function classes($classes)
     {
         $this->classes[] = $classes;
+
+        return $this;
+    }
+
+    public function chooseOption($options)
+    {
+        $this->chooseOption[] = $options;
+
+        $this->selected = $options[0];
 
         return $this;
     }

@@ -8,6 +8,7 @@
       :class="buttonClasses"
       :style="{'min-width': buttonWidth}"
       :title="field.title"
+      :dusk="field.attribute"
     ></span>
   </span>
 </template>
@@ -76,6 +77,8 @@ export default {
         root + `${this.resourceName}/${this.resourceId}/${this.field.key}`,
         {
           event: this.field.event,
+          chooseOption: this.field.chooseOption,
+          selected: this.field.selected,
           note:  this.field.reason,
         }
       );
